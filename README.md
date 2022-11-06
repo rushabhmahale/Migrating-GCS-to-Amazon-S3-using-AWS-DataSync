@@ -66,7 +66,8 @@ Refer this document:- https://cloud.google.com/storage/docs/authentication/hmack
 
 
 - Copy the access key secret key <b> do not share access-key and secret-key to anyone </b>. 
-![image](https://user-images.githubusercontent.com/63963025/200160166-c451723c-b0f7-4280-9a5d-d7582a38bba9.png)
+![image](https://user-images.githubusercontent.com/63963025/200161333-1a109be3-eaf1-447a-a5e0-7eb6aabd5f83.png)
+
 
 - You can also go through this document given below:- https://cloud.google.com/storage/docs/authentication/managing-hmackeys#console 
 - Keep the key at secret location we will use later. 
