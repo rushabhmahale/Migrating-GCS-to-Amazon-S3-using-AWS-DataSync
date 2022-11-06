@@ -72,6 +72,7 @@ Refer this document:- https://cloud.google.com/storage/docs/authentication/hmack
 - The service account principal needs sufficient permission for the DataSync agent to connect and migrate the objects. You can assign a predefined role named Storage Object Viewer to the service account principal as a way to grant this permission.
 - Now go to IAM & Admin section select IAM search your service account that you have created earlier add another role Storage Object Viewer.
 
-![image](https://user-images.githubusercontent.com/63963025/200161159-c8ada1e9-4af2-4fe0-b6ce-577cb9d84890.png)
+![image](https://user-images.githubusercontent.com/63963025/200161234-fceecdb7-326a-4aca-b107-2b53d06f82eb.png)
+
 
 
