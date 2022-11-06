@@ -45,7 +45,7 @@ Refer this document:- https://cloud.google.com/storage/docs/authentication/hmack
 ![image](https://user-images.githubusercontent.com/63963025/200159434-5aeb8c40-6799-4abb-89fd-a42d3c4f857c.png)
 
 - Service-account name. </br>
-![image](https://user-images.githubusercontent.com/63963025/200159474-42a2d9f2-7bbb-4f5e-b59f-e69639b2a57a.png)
+![image](https://user-images.githubusercontent.com/63963025/200161376-4e8b2433-9d91-41dc-9f2b-92472449f022.png)
 
 - Grant permission service account <b>Storage HMAC Key Admin</b>. 
 ![image](https://user-images.githubusercontent.com/63963025/200159618-30b8ae74-25cf-433d-a867-11f8a956dfa6.png)
