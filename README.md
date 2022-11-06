@@ -62,7 +62,8 @@ Refer this document:- https://cloud.google.com/storage/docs/authentication/hmack
 ![image](https://user-images.githubusercontent.com/63963025/200159954-3b49813b-d315-47a7-ac11-c904a8384241.png)
 
 - Select the service account you want the HMAC key to be associated with. </br>
-![image](https://user-images.githubusercontent.com/63963025/200160029-93b97e44-bc80-4986-9e47-0059347dea1d.png)
+!![image](https://user-images.githubusercontent.com/63963025/200161285-fe2903ad-cf3d-42e9-90d7-7faf837de84b.png)
+
 
 - Copy the access key secret key <b> do not share access-key and secret-key to anyone </b>. 
 ![image](https://user-images.githubusercontent.com/63963025/200160166-c451723c-b0f7-4280-9a5d-d7582a38bba9.png)
