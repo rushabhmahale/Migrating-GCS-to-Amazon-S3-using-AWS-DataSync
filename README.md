@@ -69,5 +69,9 @@ Refer this document:- https://cloud.google.com/storage/docs/authentication/hmack
 
 - You can also go through this document given below:- https://cloud.google.com/storage/docs/authentication/managing-hmackeys#console 
 - Keep the key at secret location we will use later. 
+- The service account principal needs sufficient permission for the DataSync agent to connect and migrate the objects. You can assign a predefined role named Storage Object Viewer to the service account principal as a way to grant this permission.
+- Now go to IAM & Admin section select IAM search your service account that you have created earlier add another role Storage Object Viewer.
+
+![image](https://user-images.githubusercontent.com/63963025/200161159-c8ada1e9-4af2-4fe0-b6ce-577cb9d84890.png)
 
 
