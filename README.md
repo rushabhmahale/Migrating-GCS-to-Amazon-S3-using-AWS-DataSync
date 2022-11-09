@@ -83,7 +83,8 @@ Refer this document:- https://cloud.google.com/iam/docs/managing-conditional-rol
 
 - The access of this role by adding a condition to only allow when the resource name starts with projects/_/buckets/gcs-bucket-9291 where the demo-customer-bucket is the name of the source bucket. Notice that the condition uses a starts with condition. This allows the permission to be granted for the bucket and the objects within the bucket using a single statement.
 
-![image](https://user-images.githubusercontent.com/63963025/200755249-4e1cc031-2fb4-43a6-a997-52707a5d46d3.png)
+![image](https://user-images.githubusercontent.com/63963025/200893516-a557d0d6-2d64-4551-85db-76bc98d83c91.png)
+
 
 Refer this document:- https://cloud.google.com/storage/docs/introduction#resources 
 
