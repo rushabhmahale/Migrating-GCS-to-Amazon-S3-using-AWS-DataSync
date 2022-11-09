@@ -76,5 +76,25 @@ Refer this document:- https://cloud.google.com/storage/docs/authentication/hmack
 
 ![image](https://user-images.githubusercontent.com/63963025/200161234-fceecdb7-326a-4aca-b107-2b53d06f82eb.png)
 
+- Now select IAM condition add.
+![image](https://user-images.githubusercontent.com/63963025/200753281-83442c36-ac7c-4018-907a-af1dc8f90cfe.png)
+
+Refer this document:- https://cloud.google.com/iam/docs/managing-conditional-role-bindings.
+
+- The access of this role by adding a condition to only allow when the resource name starts with projects/_/buckets/gcs-bucket-9291 where the demo-customer-bucket is the name of the source bucket. Notice that the condition uses a starts with condition. This allows the permission to be granted for the bucket and the objects within the bucket using a single statement.
+
+![image](https://user-images.githubusercontent.com/63963025/200755249-4e1cc031-2fb4-43a6-a997-52707a5d46d3.png)
+
+Refer this document:- https://cloud.google.com/storage/docs/introduction#resources 
+
+resource.name.startsWith(“projects/_/buckets/gcs-bucket-9291”)
+
+- Now go to AWS S3 Create destination bucket where you will store all your gcs bucket data.
+
+Refer this document:- https://docs.aws.amazon.com/AmazonS3/latest/userguide/creating-bucket.html 
+
+### Step 3:- Create Destination bucket in S3 AWS 
+ - Once you create the destination bucket, obtain the bucket <b>Amazon Resource Name (ARN)</b> from the bucket’s Properties tab.
+![image](https://user-images.githubusercontent.com/63963025/200758589-1f86b3a3-119a-43c1-b94e-85a5c296f7a5.png)
 
 
