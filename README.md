@@ -99,19 +99,19 @@ Refer this document:- https://docs.aws.amazon.com/AmazonS3/latest/userguide/crea
 ![image](https://user-images.githubusercontent.com/63963025/200758589-1f86b3a3-119a-43c1-b94e-85a5c296f7a5.png)
 
 
-### Step 4 create IAM Role in AWS and attach to s3 bucket 
+### Step 4 Create IAM Role in AWS and attach to s3 bucket 
 - AWS DataSync needs to access the Amazon S3 bucket in order to transfer the data to the destination bucket. This requires DataSync to assume an IAM role with appropriate permission and trust relationship. 
-- Go to AWS IAM role and create role  
+- Go to AWS IAM role and create role.  
 ![image](https://user-images.githubusercontent.com/63963025/201480786-e50b18bb-809b-44f5-920a-529401327ccf.png)
-- Select the AWS service 
+- Select the AWS service. 
 ![image](https://user-images.githubusercontent.com/63963025/201480893-97f8292c-88cd-4038-85ec-a91bd6f82725.png)
-- In use-case section select s3 next 
+- In use-case section select s3 next. 
 ![image](https://user-images.githubusercontent.com/63963025/201480932-b354dd89-5d37-4aa1-92d0-2d4d9e4e105d.png)
-- Create policy 
+- Create policy. 
 ![image](https://user-images.githubusercontent.com/63963025/201480970-38791851-fd73-4e40-8465-289c68708260.png)
-- Select json format 
+- Select json format. 
 ![image](https://user-images.githubusercontent.com/63963025/201481010-5fb4aee0-e019-47b5-bc1f-8c1dc103f27a.png)
-- Add this json plolicy 
+- Add this json plolicy. 
 ```
 {
     "Version": "2012-10-17",
@@ -145,5 +145,39 @@ Refer this document:- https://docs.aws.amazon.com/AmazonS3/latest/userguide/crea
 
 Refer this document:- https://docs.aws.amazon.com/datasync/latest/userguide/using-identity-based-policies.html#customer-managed-policies
 
+### Step 5 Create the VPC Endpoints 
+- Create the VPC, subnet, route table, and security group based on the network requirements when using VPC endpoints.
+![image](https://user-images.githubusercontent.com/63963025/201482787-e276d91a-ce24-4d58-8e98-2cf8024b63cc.png)
 
+- Subnet 
+![image](https://user-images.githubusercontent.com/63963025/201482812-cc017e26-f69c-4953-a3af-48eb3d66e4f6.png)
 
+- Edit route table subnet associations 
+![image](https://user-images.githubusercontent.com/63963025/201482902-be0ba184-d816-47bf-ba16-1addba9b083b.png)
+
+- Internet Gateway
+ ![image](https://user-images.githubusercontent.com/63963025/201482976-ed9d95d6-887d-4fbf-98c8-dc30bcc414df.png)
+
+- Attach routes 0.0.0.0/0 for internet gateway 
+![image](https://user-images.githubusercontent.com/63963025/201483045-b9c28a7f-a48c-46eb-87ab-66af79c59432.png)
+
+- Lets create VPC Endpoint 
+![image](https://user-images.githubusercontent.com/63963025/201483167-5d5f56a8-8dae-489d-8aa1-b15895bb27bc.png)
+
+![image](https://user-images.githubusercontent.com/63963025/201483199-1d2f50ea-73d7-4fc3-ab6c-d14751bf7887.png)
+
+![image](https://user-images.githubusercontent.com/63963025/201483213-92735f5a-8105-4dec-97da-fc7bea56053a.png)
+
+![image](https://user-images.githubusercontent.com/63963025/201483230-3efe2532-fb16-4097-927b-0ffb897fb4d3.png)
+
+Refer this document:- https://docs.aws.amazon.com/vpc/latest/privatelink/create-interface-endpoint.html
+
+### Step 6 Deploy an Amazon EC2 DataSync agent
+
+Refer this document:-  https://docs.aws.amazon.com/datasync/latest/userguide/deploy-agents.html#ec2-deploy-agent
+
+### Step 7 Create DataSync locations
+- Open the AWS DataSync console and choose Locations. Then select the Create Location.
+![image](https://user-images.githubusercontent.com/63963025/201484279-09283047-c97b-47c2-b54b-fda3794a1d8f.png)
+
+- 
