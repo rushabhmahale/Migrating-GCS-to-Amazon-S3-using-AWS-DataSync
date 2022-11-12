@@ -99,3 +99,51 @@ Refer this document:- https://docs.aws.amazon.com/AmazonS3/latest/userguide/crea
 ![image](https://user-images.githubusercontent.com/63963025/200758589-1f86b3a3-119a-43c1-b94e-85a5c296f7a5.png)
 
 
+### Step 4 create IAM Role in AWS and attach to s3 bucket 
+- AWS DataSync needs to access the Amazon S3 bucket in order to transfer the data to the destination bucket. This requires DataSync to assume an IAM role with appropriate permission and trust relationship. 
+- Go to AWS IAM role and create role  
+![image](https://user-images.githubusercontent.com/63963025/201480786-e50b18bb-809b-44f5-920a-529401327ccf.png)
+- Select the AWS service 
+![image](https://user-images.githubusercontent.com/63963025/201480893-97f8292c-88cd-4038-85ec-a91bd6f82725.png)
+- In use-case section select s3 next 
+![image](https://user-images.githubusercontent.com/63963025/201480932-b354dd89-5d37-4aa1-92d0-2d4d9e4e105d.png)
+- Create policy 
+![image](https://user-images.githubusercontent.com/63963025/201480970-38791851-fd73-4e40-8465-289c68708260.png)
+- Select json format 
+![image](https://user-images.githubusercontent.com/63963025/201481010-5fb4aee0-e019-47b5-bc1f-8c1dc103f27a.png)
+- Add this json plolicy 
+```
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Action": [
+                "s3:GetBucketLocation",
+                "s3:ListBucket",
+                "s3:ListBucketMultipartUploads"
+            ],
+            "Effect": "Allow",
+            "Resource": "YourS3BucketArn"
+        },
+        {
+            "Action": [
+                "s3:AbortMultipartUpload",
+                "s3:DeleteObject",
+                "s3:GetObject",
+                "s3:ListMultipartUploadParts",
+                "s3:GetObjectTagging",
+                "s3:PutObjectTagging",
+                "s3:PutObject"
+              ],
+            "Effect": "Allow",
+            "Resource": "YourS3BucketArn/*"
+        }
+    ]
+}
+```
+![image](https://user-images.githubusercontent.com/63963025/201481190-07453049-0ea9-4718-8974-870073d75fa8.png)
+
+Refer this document:- https://docs.aws.amazon.com/datasync/latest/userguide/using-identity-based-policies.html#customer-managed-policies
+
+
+
